@@ -1,5 +1,6 @@
 $primary-color: #0bb697;
 $secondary-color: #eee9e9;
+$secondary-color-darker: #e2e2e2;
 
 @font-face {
   font-family: Gotham;
@@ -182,5 +183,21 @@ a{
   }  
   .hero-title{
     font-size: 50px;
+  }
+}
+#blog{
+  article{
+    padding: 15px;
+    background: white;
+    border: 1px solid $secondary-color-darker;
+    .image-container{
+      min-height: 200px;
+      background: $secondary-color-darker;
+      margin: -15px;
+      margin-bottom: 15px;
+    }
+    footer{
+      margin-top: 15px;
+    }
   }
 }
