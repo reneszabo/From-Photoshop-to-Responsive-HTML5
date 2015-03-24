@@ -1,7 +1,5 @@
-/* 
-    Created on : 23-Mar-2015, 5:25:43 PM
-    Author     : Rene Roberto Ramirez Szabo <rene.szabo@gmail.com>
-*/
+$primary-color: #0bb697;
+
 @font-face {
   font-family: Gotham;
   src: url(font/Gotham-Light.otf);
@@ -22,24 +20,30 @@
   src: url(font/Gotham-Book.otf);
   font-weight: 400;
 }
+p{
+  margin:0;
+}
 *{
   font-family: Gotham;
   font-weight: 100;
 }
-
+section{
+  padding: 60px 0 ; 
+}
 .container{
   width: 940px;
   margin: 0 auto;
-  background: red;
+  background: rgba(255,0,0,.5);
 }
 a{
   &.button{
     text-align: center;
-    padding:11px 10px;
-    margin: 0 8px;
+    padding:11px 8px;
+    margin: 0 3px;
     border-radius: 5px;
     text-decoration: none;
-    border: solid 2px #0bb697;
+    border: solid 2px $primary-color;
+    line-height: 40px;
     &.button-transparent-white{
       border-color: transparent;
       background: transparent; 
@@ -49,23 +53,65 @@ a{
       }
     }
     &.button-blue{ 
-      background: #0bb697; 
+      background: $primary-color; 
       color: white;
     }
-    &:hover{
-      border-style: solid;
+    &.button-white{ 
+      border-color: white;
+      background: transparent; 
+      color: white;
     }
   }
 }
 
 #header{
-  background: url(../images/headerbg.jpg);
-  min-height: 100px;
+  padding: 0;
+  #header-fixed{
+    position: fixed;
+    width:100%;
+  }
+  #logo{
+    display: inline-block;
+    color:white;
+    h1{
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      &:after{
+        content: ".";
+        color: $primary-color;
+        font-weight: 300;
+      }
+    }
+    p{
+      font-size: 11px;
+      margin-top: 0px;
+    }
+  }
   nav{
+    margin-top: 6px;
+    display: inline-block;
+    float:right; 
     ul{
+      padding:0px;
       li{
         display: inline-block;
       }
     }
+  }
+}
+.arrow-white{
+}
+#hero{
+  background: url(../images/headerbg.jpg) no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  color: white;
+  .container{
+    padding-top: 265px;
+    text-align: center;
+  }  
+  .hero-title{
+    text-transform: uppercase;
+    font-size: 50px;
   }
 }
