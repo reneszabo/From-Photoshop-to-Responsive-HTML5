@@ -193,15 +193,53 @@ a{
     padding: 15px;
     background: white;
     border: 1px solid $secondary-color-darker;
-    .image-container{
-      min-height: 200px;
-      background: $secondary-color-darker;
-      margin: -15px;
-      margin-bottom: 15px;
-    }
     footer{
       margin-top: 15px;
     }
+    .image-container{
+      margin: -15px;
+    }
+  }
+}
+.image-container{
+  min-height: 200px;
+  background: $secondary-color-darker;
+  margin-bottom: 15px;
+  position: relative;
+  .overlay-image{
+    width: 100%;
+    background: $primary-color;
+    position: absolute;
+    display:none;
+    top:0;
+    bottom:0;
+    z-index: 16;
+    .circle{
+      border: 2px solid white;
+      border-radius: 100%;
+      width: 66px;
+      height: 66px;
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      svg{
+        width:30px;
+        height:30px;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+      }
+    }
+  }
+  &:hover .overlay-image{
+    display: block;
+  }
+  img{
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
   }
 }
 #support{
@@ -215,6 +253,6 @@ a{
   background-size: 100% auto;
 }
 body > footer{
-      background: $secondary-color-darker;
+  background: $secondary-color-darker;
   min-height: 50px;
 }

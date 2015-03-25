@@ -160,13 +160,55 @@ a.button {
   padding: 15px;
   background: white;
   border: 1px solid #e2e2e2; }
-  #blog article .image-container {
-    min-height: 200px;
-    background: #e2e2e2;
-    margin: -15px;
-    margin-bottom: 15px; }
   #blog article footer {
     margin-top: 15px; }
+  #blog article .image-container {
+    margin: -15px; }
+
+.image-container {
+  min-height: 200px;
+  background: #e2e2e2;
+  margin-bottom: 15px;
+  position: relative; }
+  .image-container .overlay-image {
+    width: 100%;
+    background: #0bb697;
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    z-index: 16; }
+    .image-container .overlay-image .circle {
+      border: 2px solid white;
+      border-radius: 100%;
+      width: 66px;
+      height: 66px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+      .image-container .overlay-image .circle svg {
+        width: 30px;
+        height: 30px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0; }
+  .image-container:hover .overlay-image {
+    display: block; }
+  .image-container img {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
 
 #support {
   background: url(../images/supportBG.jpg) no-repeat;
