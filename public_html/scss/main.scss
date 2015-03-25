@@ -99,6 +99,9 @@ section{
   margin: 0 auto;
   background: rgba(255,0,0,.5);
 }
+.text-white{
+  color: white;
+}
 .text-center{
   text-align: center;
 }
@@ -200,4 +203,18 @@ a{
       margin-top: 15px;
     }
   }
+}
+#support{
+  background: url(../images/supportBG.jpg) no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+#social{
+  background: url(../images/elements/backgrounds/bg4.jpg) no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+body > footer{
+      background: $secondary-color-darker;
+  min-height: 50px;
 }
