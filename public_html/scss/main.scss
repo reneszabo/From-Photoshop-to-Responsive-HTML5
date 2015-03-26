@@ -148,10 +148,9 @@ a{
 
 #header{
   padding: 0;
-  #header-fixed{
-    position: fixed;
+  #header-static{
+    position: static;
     width:100%;
-    z-index: 16;
   }
   #logo{
     display: inline-block;
