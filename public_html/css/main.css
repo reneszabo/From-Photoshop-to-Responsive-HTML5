@@ -1,23 +1,26 @@
+/*DEBUG VARIABLES*/
 @font-face {
   font-family: Gotham;
   src: url(font/Gotham-Light.otf);
-  font-weight: 100; }
+  font-weight: normal; }
 @font-face {
   font-family: Gotham;
   src: url(font/Gotham-Medium.otf);
-  font-weight: 200; }
-@font-face {
-  font-family: Gotham;
-  src: url(font/Gotham-Bold.otf);
   font-weight: 300; }
 @font-face {
   font-family: Gotham;
+  src: url(font/Gotham-Bold.otf);
+  font-weight: bold; }
+@font-face {
+  font-family: Gotham;
   src: url(font/Gotham-Book.otf);
-  font-weight: 400; }
+  font-weight: 200; }
 * {
   font-family: Gotham;
-  font-weight: 100;
-  box-sizing: border-box; }
+  font-weight: normal;
+  box-sizing: border-box;
+  color: #b8b8b8;
+  font-size: 20px; }
 
 .clearfix:after {
   visibility: hidden;
@@ -43,13 +46,21 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   padding: 0;
   margin: 0;
-  font-weight: 400; }
+  color: #828282; }
+
+h1, .h1 {
+  font-size: 32px; }
+
+h2, .h2 {
+  font-size: 28px;
+  font-weight: 200; }
+
+h3, .h3 {
+  font-size: 20px; }
 
 .col {
   float: left;
-  background: rgba(0, 255, 0, 0.5);
   display: block;
-  border: 1px solid blue;
   padding: 15px; }
 
 .col-25 {
@@ -74,17 +85,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   width: 100%; }
 
 p {
-  margin: 0; }
+  margin: 7px 0; }
 
 section {
   padding: 60px 0; }
   section.gray {
-    background: #eee9e9; }
+    background: #eaeaea; }
 
 .container {
   max-width: 980px;
-  margin: 0 auto;
-  background: rgba(255, 0, 0, 0.5); }
+  margin: 0 auto; }
 
 .text-white {
   color: white; }
@@ -95,17 +105,22 @@ section {
 .text-right {
   text-align: right; }
 
+.text-small {
+  font-size: 10px; }
+
 .text-uppercase {
   text-transform: uppercase; }
 
 a.button {
   text-align: center;
-  padding: 11px 8px;
-  margin: 0 3px;
+  padding: 0 8px;
+  margin: 7px 3px;
   border-radius: 5px;
   text-decoration: none;
   border: solid 2px #0bb697;
-  line-height: 40px; }
+  line-height: 32px;
+  font-size: 16px;
+  display: inline-block; }
   a.button.button-transparent-white {
     border-color: transparent;
     background: transparent;
@@ -125,6 +140,13 @@ a.button {
     background: transparent;
     color: white; }
 
+.arrow-down-svg {
+  width: 38px;
+  height: 38px;
+  color: red; }
+  .arrow-down-svg use {
+    fill: #b8b8b8; }
+
 #header {
   padding: 0; }
   #header #header-static {
@@ -141,7 +163,7 @@ a.button {
       #header #logo h1:after {
         content: ".";
         color: #0bb697;
-        font-weight: 300; }
+        font-weight: bold; }
     #header #logo p {
       font-size: 11px;
       margin-top: 0px; }
@@ -153,21 +175,29 @@ a.button {
       padding: 0px; }
       #header nav ul li {
         display: inline-block; }
+        #header nav ul li a {
+          font-size: 14px; }
 
 #hero {
   background: url(../images/headerbg.jpg) no-repeat;
   background-position: center top;
-  background-size: 100% auto;
-  color: white; }
+  background-size: 100% auto; }
   #hero .container {
     padding-top: 265px; }
   #hero .hero-title {
-    font-size: 50px; }
+    font-size: 48px; }
+
+#services .col p {
+  font-size: 12px; }
 
 #blog article {
   padding: 15px;
   background: white;
-  border: 1px solid #e2e2e2; }
+  border: 1px solid #dbdada; }
+  #blog article p {
+    font-size: 14px; }
+  #blog article h3 {
+    font-weight: 200; }
   #blog article footer {
     margin-top: 15px; }
   #blog article .image-container {
@@ -175,7 +205,7 @@ a.button {
 
 .image-container {
   min-height: 200px;
-  background: #e2e2e2;
+  background: #dbdada;
   margin-bottom: 15px !important;
   position: relative; }
   .image-container .overlay-image {
@@ -229,5 +259,5 @@ a.button {
   background-size: 100% auto; }
 
 body > footer {
-  background: #e2e2e2;
+  background: #dbdada;
   min-height: 50px; }

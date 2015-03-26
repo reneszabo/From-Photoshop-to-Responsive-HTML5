@@ -1,31 +1,45 @@
 $primary-color: #0bb697;
-$secondary-color: #eee9e9;
-$secondary-color-darker: #e2e2e2;
+$secondary-color: #eaeaea;
+$secondary-color-darker: #dbdada;
+$color-text-primary: #b8b8b8;
+$color-text-secondary: #828282;
+
+/*DEBUG VARIABLES*/
+.container{
+  //background: rgba(255,0,0,.5);
+
+}
+.col{
+  //background: rgba(0,255,0,.5);
+  //border: 1px solid blue;
+}
 
 @font-face {
   font-family: Gotham;
   src: url(font/Gotham-Light.otf);
-  font-weight: 100;
+  font-weight: normal;
 }
 @font-face {
   font-family: Gotham;
   src: url(font/Gotham-Medium.otf);
-  font-weight: 200;
-}
-@font-face {
-  font-family: Gotham;
-  src: url(font/Gotham-Bold.otf);
   font-weight: 300;
 }
 @font-face {
   font-family: Gotham;
+  src: url(font/Gotham-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Gotham;
   src: url(font/Gotham-Book.otf);
-  font-weight: 400;
+  font-weight: 200;
 }
 *{
   font-family: Gotham;
-  font-weight: 100;
+  font-weight: normal;
   box-sizing: border-box;
+  color: $color-text-primary;
+  font-size:20px;
 }
 .clearfix:after {
   visibility: hidden;
@@ -51,15 +65,22 @@ $secondary-color-darker: #e2e2e2;
 h1,.h1, h2,.h2,h3,.h3,h4,.h4{
   padding: 0;
   margin: 0;
-  font-weight: 400;
+  color: $color-text-secondary;
 }
-
+h1, .h1{
+  font-size: 32px;
+}
+h2, .h2{
+  font-size: 28px;
+  font-weight: 200;
+}
+h3, .h3{
+  font-size: 20px;
+}
 
 .col{
   float: left;
-  background: rgba(0,255,0,.5);
   display: block;
-  border: 1px solid blue;
   padding: 15px;
 
 }
@@ -86,7 +107,7 @@ h1,.h1, h2,.h2,h3,.h3,h4,.h4{
 }
 
 p{
-  margin:0;
+  margin:7px 0;
 }
 section{
   padding: 60px 0 ; 
@@ -97,7 +118,6 @@ section{
 .container{
   max-width: 980px;
   margin: 0 auto;
-  background: rgba(255,0,0,.5);
 }
 .text-white{
   color: white;
@@ -108,18 +128,23 @@ section{
 .text-right{
   text-align: right;
 }
+.text-small{
+  font-size: 10px;
+}
 .text-uppercase{
   text-transform: uppercase;
 }
 a{
   &.button{
     text-align: center;
-    padding:11px 8px;
-    margin: 0 3px;
+    padding:0 8px;
+    margin: 7px 3px;
     border-radius: 5px;
     text-decoration: none;
     border: solid 2px $primary-color;
-    line-height: 40px;
+    line-height: 32px;
+    font-size: 16px;
+    display: inline-block;
     &.button-transparent-white{
       border-color: transparent;
       background: transparent; 
@@ -145,7 +170,14 @@ a{
     }
   }
 }
-
+.arrow-down-svg{
+  width: 38px;
+  height: 38px;
+  color:red;
+  use{
+    fill: $color-text-primary;
+  }
+}
 #header{
   padding: 0;
   #header-static{
@@ -163,7 +195,7 @@ a{
       &:after{
         content: ".";
         color: $primary-color;
-        font-weight: 300;
+        font-weight: bold;
       }
     }
     p{
@@ -179,6 +211,9 @@ a{
       padding:0px;
       li{
         display: inline-block;
+        a{
+          font-size: 14px;
+        }
       }
     }
   }
@@ -187,12 +222,18 @@ a{
   background: url(../images/headerbg.jpg) no-repeat;
   background-position: center top;
   background-size: 100% auto;
-  color: white;
   .container{
     padding-top: 265px;
   }  
   .hero-title{
-    font-size: 50px;
+    font-size: 48px;
+  }
+}
+#services{
+  .col{
+    p{
+      font-size: 12px;
+    }
   }
 }
 #blog{
@@ -200,6 +241,12 @@ a{
     padding: 15px;
     background: white;
     border: 1px solid $secondary-color-darker;
+    p{
+      font-size: 14px;
+    }
+    h3{
+      font-weight: 200;
+    }
     footer{
       margin-top: 15px;
     }
