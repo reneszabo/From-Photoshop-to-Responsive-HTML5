@@ -95,7 +95,7 @@ section{
   }
 }
 .container{
-  max-width: 940px;
+  max-width: 980px;
   margin: 0 auto;
   background: rgba(255,0,0,.5);
 }
@@ -128,6 +128,12 @@ a{
         border-color: white;
       }
     }
+    &.button-transparent-blue{
+      border-color: transparent;
+      background: transparent; 
+      color: $primary-color;
+      border-color: $primary-color;
+    }
     &.button-blue{ 
       background: $primary-color; 
       color: white;
@@ -145,6 +151,7 @@ a{
   #header-fixed{
     position: fixed;
     width:100%;
+    z-index: 16;
   }
   #logo{
     display: inline-block;
@@ -174,8 +181,6 @@ a{
     }
   }
 }
-.arrow-white{
-}
 #hero{
   background: url(../images/headerbg.jpg) no-repeat;
   background-position: center top;
@@ -204,7 +209,7 @@ a{
 .image-container{
   min-height: 200px;
   background: $secondary-color-darker;
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
   position: relative;
   .overlay-image{
     width: 100%;

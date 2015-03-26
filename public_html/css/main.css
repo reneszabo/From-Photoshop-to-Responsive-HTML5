@@ -82,7 +82,7 @@ section {
     background: #eee9e9; }
 
 .container {
-  max-width: 940px;
+  max-width: 980px;
   margin: 0 auto;
   background: rgba(255, 0, 0, 0.5); }
 
@@ -112,6 +112,11 @@ a.button {
     color: white; }
     a.button.button-transparent-white:hover {
       border-color: white; }
+  a.button.button-transparent-blue {
+    border-color: transparent;
+    background: transparent;
+    color: #0bb697;
+    border-color: #0bb697; }
   a.button.button-blue {
     background: #0bb697;
     color: white; }
@@ -124,7 +129,8 @@ a.button {
   padding: 0; }
   #header #header-fixed {
     position: fixed;
-    width: 100%; }
+    width: 100%;
+    z-index: 16; }
   #header #logo {
     display: inline-block;
     color: white; }
@@ -168,7 +174,7 @@ a.button {
 .image-container {
   min-height: 200px;
   background: #e2e2e2;
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
   position: relative; }
   .image-container .overlay-image {
     width: 100%;
