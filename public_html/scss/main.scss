@@ -156,6 +156,9 @@ a{
   #logo{
     display: inline-block;
     color:white;
+    float: left;
+    height: 50px;
+    padding: 3px 15px;
     h1{
       margin-top: 15px;
       &:after{
