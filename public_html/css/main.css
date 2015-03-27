@@ -16,11 +16,13 @@
   src: url(font/Gotham-Book.otf);
   font-weight: 200; }
 * {
+  box-sizing: border-box; }
+
+body, html {
   font-family: Gotham;
   font-weight: normal;
-  box-sizing: border-box;
   color: #b8b8b8;
-  font-size: 20px; }
+  font-size: 16px; }
 
 .clearfix:after {
   visibility: hidden;
@@ -43,21 +45,6 @@
   display: block; }
 
 /* close commented backslash hack */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  padding: 0;
-  margin: 0;
-  color: #828282; }
-
-h1, .h1 {
-  font-size: 32px; }
-
-h2, .h2 {
-  font-size: 28px;
-  font-weight: 200; }
-
-h3, .h3 {
-  font-size: 20px; }
-
 .col {
   float: left;
   display: block;
@@ -96,6 +83,36 @@ section {
   max-width: 980px;
   margin: 0 auto; }
 
+.button {
+  text-align: center;
+  padding: 8px 12px;
+  margin: 7px 3px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: solid 2px #0bb697;
+  font-size: 16px;
+  display: inline-block; }
+  .button.button-big {
+    padding: 15px 30px; }
+  .button.button-transparent-white {
+    border-color: transparent;
+    background: transparent;
+    color: white; }
+    .button.button-transparent-white:hover {
+      border-color: white; }
+  .button.button-transparent-blue {
+    border-color: transparent;
+    background: transparent;
+    color: #0bb697;
+    border-color: #0bb697; }
+  .button.button-blue {
+    background: #0bb697;
+    color: white; }
+  .button.button-white {
+    border-color: white;
+    background: transparent;
+    color: white; }
+
 .text-white {
   color: white; }
 
@@ -105,40 +122,35 @@ section {
 .text-right {
   text-align: right; }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  padding: 0;
+  margin: 0;
+  color: #828282; }
+
+h1, .h1 {
+  font-size: 32px; }
+
+h2, .h2 {
+  font-size: 28px;
+  font-weight: 200; }
+
+h3, .h3, .text-big {
+  font-size: 20px; }
+
+.text-medium {
+  font-size: 14px; }
+
+.text-mediumer {
+  font-size: 12px; }
+
 .text-small {
+  font-size: 11px; }
+
+.text-smaller {
   font-size: 10px; }
 
 .text-uppercase {
   text-transform: uppercase; }
-
-a.button {
-  text-align: center;
-  padding: 0 8px;
-  margin: 7px 3px;
-  border-radius: 5px;
-  text-decoration: none;
-  border: solid 2px #0bb697;
-  line-height: 32px;
-  font-size: 16px;
-  display: inline-block; }
-  a.button.button-transparent-white {
-    border-color: transparent;
-    background: transparent;
-    color: white; }
-    a.button.button-transparent-white:hover {
-      border-color: white; }
-  a.button.button-transparent-blue {
-    border-color: transparent;
-    background: transparent;
-    color: #0bb697;
-    border-color: #0bb697; }
-  a.button.button-blue {
-    background: #0bb697;
-    color: white; }
-  a.button.button-white {
-    border-color: white;
-    background: transparent;
-    color: white; }
 
 .arrow-down-svg {
   width: 38px;
@@ -165,7 +177,6 @@ a.button {
         color: #0bb697;
         font-weight: bold; }
     #header #logo p {
-      font-size: 11px;
       margin-top: 0px; }
   #header nav {
     margin-top: 6px;
@@ -175,27 +186,26 @@ a.button {
       padding: 0px; }
       #header nav ul li {
         display: inline-block; }
-        #header nav ul li a {
-          font-size: 14px; }
 
 #hero {
   background: url(../images/headerbg.jpg) no-repeat;
   background-position: center top;
-  background-size: 100% auto; }
+  background-size: 100% auto;
+  padding-bottom: 18px; }
   #hero .container {
     padding-top: 265px; }
   #hero .hero-title {
-    font-size: 48px; }
-
-#services .col p {
-  font-size: 12px; }
+    font-size: 48px;
+    margin-bottom: 30px; }
+  #hero .button {
+    margin-top: 30px; }
+  #hero .hero-bottom {
+    padding-top: 50px; }
 
 #blog article {
   padding: 15px;
   background: white;
   border: 1px solid #dbdada; }
-  #blog article p {
-    font-size: 14px; }
   #blog article h3 {
     font-weight: 200; }
   #blog article footer {
