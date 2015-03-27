@@ -231,9 +231,9 @@ and open the template in the editor.
     <section id="portfolio">
 
       <div class="container">
-        <h2>Our Portfolio</h2>
         <div class="clearfix">
           <div class="col col-66">
+            <h2>Our Portfolio</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </p>
@@ -245,12 +245,10 @@ and open the template in the editor.
             <ul class="button button-transparent-gray button-big text-uppercase dropdown col-75">
               <li>
                 All
-                <ul>
-                  <li><a href="#">Link one</a></li>
-                  <li><a href="#">Link two</a></li>
-                  <li><a href="#">Link three</a></li>
-                  <li><a href="#">Link four</a></li>
-                  <li><a href="#">Link five</a></li>
+                <ul class="text-uppercase">
+                  <li><a href="#">WordPress</a></li>
+                  <li><a href="#">Photoshop</a></li>
+                  <li><a href="#">UNBOUNSE</a></li>
                 </ul>
               </li> 
             </ul>
@@ -398,15 +396,15 @@ and open the template in the editor.
               Here are some more information about us, you can get in touch with 
               us any time you want.
             </p>
-            <ul>
+            <ul class="text-medium">
               <li>
-                <label>Address:</label> New York City
+                <label class=" text-blue ">Address:</label> New York City
               </li>
               <li>
-                <label>Email:</label> my@gmail.com
+                <label class=" text-blue ">Email:</label> my@gmail.com
               </li>
               <li>
-                <label>Phone:</label> +00951 985 427 81
+                <label class=" text-blue ">Phone:</label> +00951 985 427 81
               </li>
             </ul>
           </div>
@@ -414,18 +412,18 @@ and open the template in the editor.
             <h2>Contact Us</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
               sed eiusmod from 9:00 AM until 5:30 PM.</p>
-            <form action="#go-to-server" method="post">
-              <label>Name</label>
+            <form action="#go-to-server" method="get">
+              <label for="form-name" class="text-mediumer text-blue required">Name</label>
               <input type="text" class="col-100" name="name" id="form-name" placeholder="Your Name" />
-              <label>Email</label>
+              <label for="form-email" class="text-mediumer text-blue required">Email</label>
               <input type="email" class="col-100" name="email" id="form-email" placeholder="Your Email" />
-              <label>Phone</label>
+              <label for="form-phone" class="text-mediumer text-blue required">Phone</label>
               <input type="text" class="col-100" name="phone" id="form-phone" placeholder="Your Phone" />
-              <label>Your Message</label>
+              <label for="form-message" class="text-mediumer text-blue required">Your Message</label>
               <textarea class="col-100" name="message" id="form-message" placeholder="Your Message"></textarea>
 
               <div class="text-right">
-                <button type="submit">Send Mail</button>
+                <button type="submit" class="button button-transparent-blue button-big">Send Mail</button>
               </div>
 
             </form>
@@ -437,13 +435,15 @@ and open the template in the editor.
     <section id="suscribe" class="gray">
       <div class="container">
         <div class="clearfix">
-          <div class="col col-25"></div>
-          <div class="col col-50">
+          <div class="col col-10"></div>
+          <div class="col col-80">
             <h2>Subscribe to Our Newsletter!</h2>
-            <input type="email" name="suscribe" id="suscribe-input" placeholder="Your Email Address..">
-            <a href="#suscribe">
-              <img src="images/subscribeBtn.jpg" alt=""/>
-            </a>
+            <div class="inline clearfix">
+              <input class="col-70 inline" type="email" name="suscribe" id="suscribe-input" placeholder="Your Email Address..">
+              <a href="#suscribe" class="col-25 pull-right button button-blue button-big text-med">
+                Subscribe!
+              </a>
+            </div>
             <p>
               Subscribe to our weekly newsletter to receive
             </p>
@@ -451,42 +451,55 @@ and open the template in the editor.
               the latest freebies in your inbox!
             </p>
           </div>
-          <div class="col col-25"></div>
+          <div class="col col-10"></div>
         </div>
       </div>
     </section>
     <footer>
       <div class="container">
-        <div class="clearfix">
+        <div class="clearfix text-medium">
           <div class="col col-50">
-            <p> Made with <span>HeART</span> in Earth.</p>
-            <p>All rights reserved Copyright © 2014 <label>Master</label></p>
+            <p> 
+              Made with 
+              <span>
+                <img src="images/elements/icons/heart-line.png" alt=""/>
+              </span> 
+              in Earth.
+            </p>
+            <p>
+              All rights reserved Copyright © 2014 
+              <span class="text-blue">Master</span>
+            </p>
           </div>
           <div class="col col-50 text-right">
-            <span>Find us on this platforms:</span>
-            <ul>
-              <li>
-                <a href="#social">
-                  <span>facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="#social">
-                  <span>twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="#social">
-                  <span>forrest</span>
-                </a>
-              </li>
-              <li>
-                <a href="#social">
-                  <span>dribbble</span>
-                </a>
-              </li>
-            </ul>
+            <table>
+              <tr>
+                <td>
+                  Find us on this platforms:
 
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      <a href="#social" class="icon facebook-icon">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#social" class="icon twitter-icon">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#social" class="icon forrst-icon">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#social" class="icon dribbble-icon">
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
