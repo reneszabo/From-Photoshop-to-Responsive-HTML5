@@ -35,6 +35,8 @@ $color-text-secondary: #828282;
   font-weight: 200;
 }
 *{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 body, html{
@@ -328,11 +330,34 @@ form{
   display: inline-block;
   background-repeat: no-repeat;
 }
-
+.hamburger{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  padding-left: 1.25em;
+  display:none;
+  height: 22px;
+  width: 22px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: black;
+    box-shadow: 
+      0 0.25em 0 0 black,
+      0 0.5em 0 0 black;
+  }
+}
 #header{
   padding: 0;
   .container{
     padding: 0;
+  }
+  .container{
+    position:relative;
   }
   #header-static{
     position: static;
@@ -493,6 +518,132 @@ body > footer{
     li{
       display: inline-block;
       margin: 4px;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  #hero{
+    .hero-title{
+      font-size: 35px;
+    }
+    .container{
+      padding-top: 100px;
+    }
+  }
+  .col-66{
+    width: 50%;
+    .col-66{
+      width: 66%;
+    }
+  }
+  .col-33{
+    width: 50%;
+    .col-33{
+      width: 33%;
+
+    }
+  }
+  p.col-50, ul.col-50{
+    width:100%;
+  }
+  h1, .h1{
+    font-size: 25px;
+  }
+}
+@media (max-width: 775px) {
+  #header{
+    #logo{
+      h1{
+        margin-top: 25px;
+      }
+      p{
+        display:none;
+      }
+    }
+  }
+}
+@media (max-width: 730px) {
+  #header{
+    #logo{
+      display: block;
+      float: none;
+      h1{
+        margin-top: 10px;
+        color: black;
+      }
+    }
+    nav{
+      float: none;
+      display: block;
+      text-align: center;
+      background: $secondary-color;
+      ul{
+        display: inline-block;
+        margin: 0;
+      }
+      .button-transparent-white{
+        color:black;
+      }
+
+    }
+  }
+  #hero{
+    .container{
+      padding: 0px;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .hamburger{
+    display: inline-block;
+  }
+  #header{
+    nav{
+      text-align: center;
+      ul{
+        display: block;
+        li{
+          display: block;
+        }
+      }
+    }
+  }
+  #hero{
+    .hero-title{
+      font-size: 25px;
+    }
+    .container{
+      padding-top: 0px;
+    }
+  }
+  .col-50, .col-33{
+    width: 100%;
+  }
+  .col-33{
+    .col-33{
+      width: 33%;
+    }
+  }
+  #suscribe  {
+    input, .button{
+      float: none;
+      display: block;
+      width: 100%;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  body > footer{
+    .col-50{
+      text-align: center;
+      td{
+        display:block;
+        ul{
+          padding-left: 0;
+        }
+      }
     }
   }
 }
