@@ -3,6 +3,13 @@ $secondary-color: #eaeaea;
 $secondary-color-darker: #dbdada;
 $color-text-primary: #b8b8b8;
 $color-text-secondary: #828282;
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
 /*-- DEBUG VARIABLES ---------------------------------------------------------*/
 .container{
   //background: rgba(255,0,0,.5);
@@ -125,16 +132,18 @@ section{
   margin: 7px 3px;
   border-radius: 5px;
   text-decoration: none;
-  border: solid 1px $primary-color;
+  border: solid 1px;
+  border-color: $primary-color;
   font-size: 16px;
+  background-color: transparent; 
   display: inline-block;
+  @include transition(background-color ease .3s, border-color ease .3s);
   &.button-big{
     padding: 15px 30px;
     border-width: 2px;
   }
   &.button-transparent-white{
     border-color: transparent;
-    background: transparent; 
     color: white;
     &:hover{
       border-color: white;
@@ -142,25 +151,39 @@ section{
   }
   &.button-transparent-blue{
     border-color: transparent;
-    background: transparent; 
     color: $primary-color;
     border-color: $primary-color;
+    &:hover{
+      color: white;
+      border-color: $primary-color;
+      background-color: $primary-color;
+    }
   }
   &.button-transparent-gray{
     border-color: transparent;
-    background: transparent; 
     color: $secondary-color-darker;
     border-color: $secondary-color-darker;
     font-weight: 200;
+    &:hover{
+      color: black;
+      background-color:  $secondary-color-darker;
+    }
   }
   &.button-blue{ 
     background: $primary-color; 
     color: white;
+    &:hover{
+      background: #0CCCA9; 
+    }
   }
   &.button-white{ 
     border-color: white;
     background: transparent; 
     color: white;
+    &:hover{
+      background: white;
+      color: black;
+    }
   }
 }
 h1,.h1, h2,.h2,h3,.h3,h4,.h4{
@@ -592,6 +615,16 @@ body > footer{
       padding: 0px;
     }
   }
+  #suscribe  {
+    input, .button{
+      float: none;
+      display: block;
+      width: 100%;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
 }
 @media (max-width: 580px) {
   .hamburger{
@@ -622,16 +655,6 @@ body > footer{
   .col-33{
     .col-33{
       width: 33%;
-    }
-  }
-  #suscribe  {
-    input, .button{
-      float: none;
-      display: block;
-      width: 100%;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-bottom: 15px;
     }
   }
   body > footer{
